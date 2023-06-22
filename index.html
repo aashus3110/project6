@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      body {
+        background-color: black;
+      }
+      hr {
+        border: 5px solid rgb(53, 53, 53);
+      }
+      .bg {
+        position: relative;
+        height: 110vh;
+        background-image: url(./img/p6_bg_img.jpg);
+        background-position: bottom;
+        width: 100%;
+        opacity: 0.5;
+      }
+      .nav {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        top: 16px;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .logo {
+        height: 3.5rem;
+        width: 12rem;
+      }
+      .logo > img {
+        height: 3.5rem;
+        width: 12rem;
+      }
+      .sb {
+        display: flex;
+        width: 20%;
+        justify-content: space-around;
+      }
+      .select {
+        background: transparent;
+        border: 0.5px solid white;
+        padding: 3px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      select {
+        background: transparent;
+        appearance: none;
+        padding: 3px 10px;
+        color: white;
+        border: none;
+        outline: none;
+        font-weight: 700;
+      }
+      .fa {
+        color: white;
+        font-size: 20px;
+      }
+      .btn1-0 {
+        border: none;
+        /* background: rgb(153, 22, 29); */
+        background: rgb(193, 17, 25);
+        color: white;
+        font-size: 15px;
+        padding: 8px 20px;
+        border-radius: 5px;
+        font-weight: 700;
+      }
+      .inp {
+        color: white;
+        position: absolute;
+        top: 15rem;
+        left: 18rem;
+        /* margin: auto; */
+      }
+      .inp > h1 {
+        padding: 10px 0;
+        font-size: 3rem;
+        font-weight: bolder;
+      }
+      .inp > p {
+        padding: 10px 10px;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      .inp > h3 {
+        padding: 10px 10px;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      .ib {
+        display: flex;
+        gap: 10px;
+      }
+      .input {
+        padding: 20px;
+        width: 30rem;
+        background: transparent;
+        color: rgb(224, 224, 224);
+        font-size: 1rem;
+        font-weight: 600;
+        border: 0.5px solid gray;
+        border-radius: 5px;
+        outline: none;
+      }
+      .input:hover {
+        outline: 2px solid white;
+      }
+      .input::placeholder {
+        color: rgb(224, 224, 224);
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .input:hover::placeholder {
+        position: absolute;
+        top: 0;
+        color: rgb(224, 224, 224);
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .btn1-1 {
+        border: none;
+        background: rgb(193, 17, 25);
+        color: white;
+        font-size: 1.5rem;
+        padding: 15px 50px;
+        border-radius: 5px;
+        font-weight: 700;
+      }
+      .fa-angle-right {
+        font-size: 25px;
+        margin-left: 20px;
+      }
+      .s1 {
+        display: flex;
+        height: 35rem;
+      }
+      .right1 {
+        width: 50%;
+        padding-top: 200px;
+        padding-left: 50px;
+      }
+
+      .right1 > h2 {
+        font-size: 3rem;
+        font-weight: 900;
+        color: white;
+      }
+      .right1 > p {
+        font-size: 1.9rem;
+        font-weight: 500;
+        color: white;
+      }
+      .left1 {
+        width: 50%;
+        background-image: url(./img/tv.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* opacity: 0.8; */
+      }
+      .s2 {
+        display: flex;
+        height: 35rem;
+      }
+      .right2 {
+        width: 50%;
+        background-image: url(./img/mobile.jpg);
+        background-position-y: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .left2 {
+        width: 50%;
+        padding-top: 200px;
+        padding-right: 200px;
+      }
+      .left2 > h2 {
+        font-size: 3rem;
+        font-weight: 900;
+        padding: 20px;
+        color: white;
+      }
+      .left2 > p {
+        padding: 20px;
+        font-size: 1.9rem;
+        font-weight: 500;
+        color: white;
+      }
+      .s3 {
+        display: flex;
+        height: 35rem;
+      }
+      .right3 {
+        width: 50%;
+        padding-top: 200px;
+        padding-left: 50px;
+      }
+
+      .right3 > h2 {
+        padding: 20px;
+
+        font-size: 3rem;
+        font-weight: 900;
+        color: white;
+      }
+      .right3 > p {
+        padding: 20px;
+
+        font-size: 1.9rem;
+        font-weight: 500;
+        color: white;
+      }
+      .left3 {
+        width: 50%;
+        background-image: url(./img/device.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* opacity: 0.8; */
+      }
+      .s4 {
+        display: flex;
+        height: 35rem;
+      }
+      .right4 {
+        width: 50%;
+        background-image: url(./img/child.png);
+        background-position-y: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .left4 {
+        width: 50%;
+        padding-top: 200px;
+        padding-right: 50px;
+      }
+      .left4 > h2 {
+        font-size: 3rem;
+        font-weight: 900;
+        padding: 20px;
+        color: white;
+      }
+      .left4 > p {
+        padding: 20px;
+        font-size: 1.9rem;
+        font-weight: 500;
+        color: white;
+      }
+      .s5 {
+        padding: 30px;
+      }
+      .s5 > h2 {
+        padding: 30px 0;
+        text-align: center;
+        color: white;
+        font-size: 3.5rem;
+        font-weight: bolder;
+      }
+      .s5 > details {
+        color: white;
+        padding: 10px;
+        font-size: 2rem;
+        margin: 1em auto;
+        width: 100%;
+        background-color: rgb(66, 66, 66);
+        position: relative;
+      }
+      .s5 > details > summary {
+        border-bottom: 1px solid black;
+        background-color: rgb(66, 66, 66);
+        display: flex;
+        justify-content: space-between;
+        font-size: 25px;
+        padding: 30px 30px;
+        color: white;
+        list-style: none;
+      }
+      .s5 > details > summary > i {
+        font-size: 30px;
+      }
+      .s5-1 {
+        display: flex;
+        height: 10rem;
+        margin: auto;
+        width: 55%;
+        flex-direction: column;
+      }
+      .s5-1 > span {
+        text-align: center;
+        color: white;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        font-weight: 800;
+      }
+      .s6 {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2rem;
+        gap: 1.5rem;
+        height: 30rem;
+        padding: 40px;
+      }
+      .s6-2 {
+        color: white;
+        display: flex;
+        justify-content: space-around;
+      }
+      .s6-2 > div > ul > li {
+        color: white;
+        list-style: none;
+        padding: 15px;
+        text-decoration: underline;
+      }
+      .s6-3 {
+        display: inline;
+      }
+      .s6-3 > .select {
+        display: inline;
+        padding: 10px 20px;
+      }
+      .s6-3 > .select > select {
+        display: inline;
+        padding: 10px 20px;
+      }
+      @media screen and (min-width: 551px) and (max-width: 1000px) {
+        .bg {
+          position: relative;
+          height: 60vh;
+          width: 100vw;
+          background-position: center;
+          background-size: cover;
+        }
+
+        .sb {
+          width: 40%;
+        }
+        .inp {
+          color: white;
+          position: absolute;
+          top: 10rem;
+          left: 0;
+          text-align: center;
+        }
+        .inp > h1 {
+          font-size: 2rem;
+        }
+        .inp > p {
+          font-size: 1rem;
+        }
+        .inp > h3 {
+          font-size: 1rem;
+        }
+        .input {
+          padding: 10px;
+          width: 25rem;
+        }
+        .btn1-1 {
+          padding: 15px 20px;
+        }
+        .ib {
+          margin: 10px 20px 0 25px;
+          gap: 10px;
+        }
+        .s1 {
+          display: flex;
+          flex-direction: column;
+          height: 30rem;
+        }
+        .right1 {
+          width: 90%;
+          padding-top: 50px;
+          text-align: center;
+        }
+        .right1 > h2 {
+          font-size: 2rem;
+        }
+        .right1 > p {
+          font-size: 1.2rem;
+        }
+        .left1 {
+          width: 90%;
+          height: 20rem;
+          background-image: url(./img/tv.png);
+        }
+        .s2 {
+          display: flex;
+          flex-direction: column-reverse;
+          height: 30rem;
+        }
+        .right2 {
+          width: 90%;
+          height: 20rem;
+          padding-left: 150px;
+          padding-right: 150px;
+          background-image: url(./img/mobile.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+
+        .left2 {
+          width: 90%;
+          padding-top: 50px;
+          padding-left: 50px;
+          padding-right: 0;
+        }
+        .left2 > h2 {
+          text-align: center;
+          font-size: 2rem;
+          padding: 20px;
+        }
+        .left2 > p {
+          text-align: center;
+          padding: 20px;
+          font-size: 1.2rem;
+        }
+        .s3 {
+          display: flex;
+          flex-direction: column;
+          height: 35rem;
+        }
+        .right3 {
+          width: 90%;
+          padding-top: 50px;
+          padding-left: 50px;
+          text-align: center;
+        }
+
+        .right3 > h2 {
+          padding: 20px;
+          font-size: 2rem;
+        }
+        .right3 > p {
+          padding: 20px;
+          font-size: 1.2rem;
+        }
+        .left3 {
+          width: 90%;
+          height: 20rem;
+          background-image: url(./img/device.png);
+        }
+        .s4 {
+          display: flex;
+          height: 35rem;
+          flex-direction: column-reverse;
+        }
+        .right4 {
+          width: 90%;
+          height: 20rem;
+          background-image: url(./img/child.png);
+          background-position: center;
+        }
+
+        .left4 {
+          width: 90%;
+          padding-top: 50px;
+          padding-right: 0px;
+          text-align: center;
+        }
+        .left4 > h2 {
+          font-size: 3rem;
+          font-weight: 900;
+          padding: 20px;
+          color: white;
+        }
+        .left4 > p {
+          padding: 20px;
+          font-size: 1.9rem;
+          font-weight: 500;
+          color: white;
+        }
+        .s5-1 {
+          width: 100%;
+        }
+      }
+      @media screen and (min-width: 50px) and (max-width: 550px) {
+        .bg {
+          position: relative;
+          height: 100vh;
+          width: 100vw;
+          background-position: center;
+          background-size: cover;
+        }
+        .logo {
+          height: 2rem;
+          width: 8rem;
+        }
+        .logo > img {
+          height: 2rem;
+          width: 8rem;
+        }
+
+        .sb {
+          width: 60%;
+        }
+        .inp {
+          width: 100%;
+          color: white;
+          position: absolute;
+          top: 10rem;
+          left: 0;
+          text-align: center;
+        }
+        .inp > h1 {
+          font-size: 2rem;
+        }
+        .inp > p {
+          font-size: 1rem;
+        }
+        .inp > h3 {
+          font-size: 1rem;
+        }
+        .input {
+          padding: 10px;
+          width: 25rem;
+        }
+        .btn1-1 {
+          padding: 15px 20px;
+          font-size: 1rem;
+          display: flex;
+        }
+        .ib {
+          height: 60px;
+          margin: 10px 20px 0 25px;
+          gap: 10px;
+        }
+        .s1 {
+          display: flex;
+          flex-direction: column;
+          height: 30rem;
+        }
+        .right1 {
+          width: 90%;
+          padding-top: 50px;
+          text-align: center;
+        }
+        .right1 > h2 {
+          font-size: 2rem;
+        }
+        .right1 > p {
+          font-size: 1.2rem;
+        }
+        .left1 {
+          width: 90%;
+          height: 20rem;
+          background-image: url(./img/tv.png);
+        }
+        .s2 {
+          display: flex;
+          flex-direction: column-reverse;
+          height: 30rem;
+        }
+        .right2 {
+          width: 90%;
+          height: 20rem;
+          padding-left: 150px;
+          padding-right: 150px;
+          background-image: url(./img/mobile.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+
+        .left2 {
+          width: 90%;
+          padding-top: 50px;
+          padding-left: 50px;
+          padding-right: 0;
+        }
+        .left2 > h2 {
+          text-align: center;
+          font-size: 2rem;
+          padding: 20px;
+        }
+        .left2 > p {
+          text-align: center;
+          padding: 20px;
+          font-size: 1.2rem;
+        }
+        .s3 {
+          display: flex;
+          flex-direction: column;
+          height: 35rem;
+        }
+        .right3 {
+          width: 90%;
+          padding-top: 50px;
+          padding-left: 50px;
+          text-align: center;
+        }
+
+        .right3 > h2 {
+          padding: 20px;
+          font-size: 2rem;
+        }
+        .right3 > p {
+          padding: 20px;
+          font-size: 1.2rem;
+        }
+        .left3 {
+          width: 90%;
+          height: 20rem;
+          background-image: url(./img/device.png);
+        }
+        .s4 {
+          display: flex;
+          height: 35rem;
+          flex-direction: column-reverse;
+        }
+        .right4 {
+          width: 90%;
+          height: 20rem;
+          background-image: url(./img/child.png);
+          background-position: center;
+        }
+
+        .left4 {
+          width: 90%;
+          padding-top: 50px;
+          padding-right: 0px;
+          text-align: center;
+        }
+        .left4 > h2 {
+          font-size: 3rem;
+          font-weight: 900;
+          padding: 20px;
+          color: white;
+        }
+        .left4 > p {
+          padding: 20px;
+          font-size: 1.9rem;
+          font-weight: 500;
+          color: white;
+        }
+        .s5-1 {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="main">
+      <div class="nav">
+        <div class="logo">
+          <img src="./img/logo.png" alt="" />
+        </div>
+        <div class="sb">
+          <div class="select">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            <select>
+              <option>English</option>
+              <option>Hindi</option>
+            </select>
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+          </div>
+          <div class="btn1">
+            <button class="btn1-0">Sign In</button>
+          </div>
+        </div>
+      </div>
+      <div class="inp">
+        <h1>Unlimited movies, TV shows and more</h1>
+        <p>Watch anywhere. Cancel anytime.</p>
+        <h3>
+          Ready to watch? Enter your email to create or restart your membership.
+        </h3>
+        <div class="ib">
+          <input class="input" type="email" placeholder="Email address" />
+          <button class="btn1-1">
+            Get Started
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="s1">
+      <div class="right1">
+        <h2>Enjoy on your TV</h2>
+        <p>
+          Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray
+          players and more.
+        </p>
+      </div>
+      <div class="left1"></div>
+    </div>
+    <hr />
+    <div class="s2">
+      <div class="right2"></div>
+      <div class="left2">
+        <h2>Download your shows to watch offline</h2>
+        <p>Save your favourites easily and always have something to watch.</p>
+      </div>
+    </div>
+    <hr />
+    <div class="s3">
+      <div class="right3">
+        <h2>Watch everywhere</h2>
+        <p>
+          Stream unlimited movies and TV shows on your phone, tablet, laptop,
+          and TV.
+        </p>
+      </div>
+      <div class="left3"></div>
+    </div>
+    <hr />
+
+    <div class="s4">
+      <div class="right4"></div>
+      <div class="left4">
+        <h2>Create profiles for kids</h2>
+        <p>
+          Send children on adventures with their favourite characters in a space
+          made just for them—free with your membership.
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div class="s5">
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>
+          <span> What is Netflix? </span>
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </summary>
+        Netflix is a streaming service that offers a wide variety of
+        award-winning TV shows, movies, anime, documentaries and more – on
+        thousands of internet-connected devices.
+        <br />
+        You can watch as much as you want, whenever you want, without a single
+        ad – all for one low monthly price. There's always something new to
+        discover, and new TV shows and movies are added every week!
+      </details>
+      <details>
+        <summary>
+          <span> How much does Netflix cost? </span>
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </summary>
+        Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming
+        device, all for one fixed monthly fee. Plans range from ₹ 149 to ₹ 649 a
+        month. No extra costs, no contracts.
+      </details>
+      <details>
+        <summary>
+          <span> Where can I watch? </span>
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </summary>
+        Watch anywhere, anytime. Sign in with your Netflix account to watch
+        instantly on the web at netflix.com from your personal computer or on
+        any internet-connected device that offers the Netflix app, including
+        smart TVs, smartphones, tablets, streaming media players and game
+        consoles.
+        <br />
+        You can also download your favourite shows with the iOS, Android, or
+        Windows 10 app. Use downloads to watch while you're on the go and
+        without an internet connection. Take Netflix with you anywhere.
+      </details>
+      <details>
+        <summary>
+          <span> How do I cancel? </span>
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </summary>
+        Netflix is flexible. There are no annoying contracts and no commitments.
+        You can easily cancel your account online in two clicks. There are no
+        cancellation fees – start or stop your account anytime.
+      </details>
+      <details>
+        <summary>
+          <span> What can I watch on Netflix? </span>
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </summary>
+        Netflix has an extensive library of feature films, documentaries, TV
+        shows, anime, award-winning Netflix originals, and more. Watch as much
+        as you want, anytime you want.
+      </details>
+      <details>
+        <summary>
+          <span> Is Netflix good for kids? </span>
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </summary>
+        The Netflix Kids experience is included in your membership to give
+        parents control while kids enjoy family-friendly TV shows and films in
+        their own space.
+        <br />
+        Kids profiles come with PIN-protected parental controls that let you
+        restrict the maturity rating of content kids can watch and block
+        specific titles you don’t want kids to see.
+      </details>
+      <div class="s5-1">
+        <span>
+          Ready to watch? Enter your email to create or restart your membership.
+        </span>
+
+        <div class="ib">
+          <input class="input" type="email" placeholder="Email address" />
+          <button class="btn1-1">
+            Get Started
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="s6">
+      <div class="s6-1">
+        <span>Questions? Call <u> 000-800-919-1694 </u> </span>
+      </div>
+      <div class="s6-2">
+        <div class="box1">
+          <ul>
+            <li>FAQ</li>
+            <li>Media Centre</li>
+            <li>Ways to Watch</li>
+            <li>Cookie Preferences</li>
+            <li>Speed Test</li>
+          </ul>
+        </div>
+        <div class="box2">
+          <ul>
+            <li>Help Centre</li>
+            <li>Investor Relations</li>
+            <li>Terms of Use</li>
+            <li>Corporate Information</li>
+            <li>Legal Notices</li>
+          </ul>
+        </div>
+        <div class="box3">
+          <ul>
+            <li>Account</li>
+            <li>Jobs</li>
+            <li>Privacy</li>
+            <li>Contact Us</li>
+            <li>Only on Netflix</li>
+          </ul>
+        </div>
+      </div>
+      <div class="s6-3">
+        <div class="select">
+          <i class="fa fa-globe" aria-hidden="true"></i>
+          <select>
+            <option>English</option>
+            <option>Hindi</option>
+          </select>
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="s6-4">Netflix India</div>
+    </div>
+  </body>
+</html>
